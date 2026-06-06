@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio Pribadi - Web Developer, Python, Cyber Security" />
+  <title>Portofolio | Maulana Azhar</title>
+
+  <!-- Google Fonts: Sora (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome = icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- File CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<!-- Notifikasi mode desktop untuk pengguna HP -->
+<div class="desktop-notice" id="desktop-notice">
+  <i class="fas fa-desktop"></i>
+  Aktifkan mode desktop untuk tata letak yang lebih rapi
+  <button onclick="document.getElementById('desktop-notice').style.display='none'">
+    <i class="fas fa-times"></i>
+  </button>
+</div>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR -->
+  <!-- Navigasi yang akan sticky (menempel) saat scroll ke bawah    -->
+  <!-- ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo / Nama di navbar -->
+      <!-- UBAH: Ganti teks "DevPortfolio" sesuai nama/brand kamu -->
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        My Portfolio
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Menu navigasi desktop -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+        <li><a href="#skills" class="nav-link">Skill</a></li>
+        <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
+        <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+        <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <!-- Tombol kanan navbar: dark mode toggle + hamburger -->
+      <div class="nav-actions">
+
+        <!-- Tombol toggle Dark/Light Mode -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Ganti tema">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Tombol hamburger untuk mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+
+  <!-- SECTION HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+    </div>
+
+    <!-- HERO INNER: bungkus teks + foto dalam satu flex row -->
+    <div class="hero-inner">
+    <div class="hero-content">
+
+      <!-- Teks kecil di atas nama -->
+      <!-- UBAH: Sesuaikan teks sapaan -->
+      <p class="hero-greeting">Hi, saya</p>
+
+      <!-- Nama utama -->
+      <!-- UBAH: Ganti dengan nama lengkap kamu -->
+      <h1 class="hero-name">Maulana <span class="highlight">Azhar</span></h1>
+
+      <!-- Tagline dengan animasi pengetikan -->
+      <!-- UBAH: Array teks di script.js bagian "typingTexts" -->
+      <p class="hero-tagline">
+        Seorang <span class="typing-text" id="typing-text"></span>
+        <span class="cursor">|</span>
+      </p>
+
+      <!-- Deskripsi singkat -->
+      <!-- UBAH: Sesuaikan deskripsi dirimu -->
+      <p class="hero-desc">
+        Lulusan SMA dengan minat di bidang Teknologi Informasi, Web Development, dan Digital Media. Berpengalaman dalam penjualan online, pembuatan konten digital, serta pengembangan website sederhana, dengan semangat untuk terus belajar dan berkembang.
+      </p>
+
+      <!-- Tombol CTA Hero -->
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Hubungi Saya
+        </a>
+        <a href="#portfolio" class="btn btn-outline">
+          <i class="fas fa-folder-open"></i> Lihat Portofolio
+        </a>
+      </div>
+
+      <!-- Ikon sosial media -->
+      <!-- UBAH: Ganti href "#" dengan link sosial media kamu -->
+      <div class="hero-socials">
+        <a href="https://github.com/maulanaazharid" class="social-icon" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/-maulana-azhar" class="social-icon" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://youtube.com/@ravenshademlbb01" class="social-icon" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/lanz_nmc" class="social-icon" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Foto profil hero -->
+    <div class="hero-image">
+      <div class="profile-frame">
+        <!-- UBAH: Ganti src dengan path foto profil kamu -->
+        <!-- Contoh: src="assets/profile/foto-profil.jpg" -->
+        <img
+          src="assets/logo.jpg"
+          alt="Foto Profil"
+          class="profile-photo"
+          id="profile-photo"
+        />
+        <!-- Badge floating kecil -->
+        <div class="profile-badge">
+          <i class="fas fa-code"></i>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- end hero-inner -->
+
+    <!-- Panah scroll down -->
+    <a href="#about" class="scroll-down" aria-label="Scroll ke bawah">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+
+  </section>
+  <!-- END HERO -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION TENTANG SAYA -->
+  <!-- Perkenalan lebih lengkap tentang diri kamu                   -->
+  <!-- ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+
+      <!-- Judul section -->
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Kenal Lebih Dekat </span>
+        <h2 class="section-title">Tentang <span class="highlight">Saya</span></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Foto about section -->
+        <div class="about-image" data-animate="fade-right">
+          <div class="about-img-wrapper">
+            <!-- UBAH: Ganti src dengan foto kamu -->
+            <img
+              src="assets/profile.jpg"
+              alt="Tentang Saya"
+              class="about-photo"
+            />
+            <!-- Card floating experience -->
+            <div class="about-card about-card-exp">
+              <span class="card-number">4+</span>
+              <span class="card-label">Tahun Progress Belajar</span>
+            </div>
+            <!-- Card floating project -->
+            <div class="about-card about-card-proj">
+              <span class="card-number">±6</span>
+              <span class="card-label">Project Dibuat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teks about -->
+        <div class="about-text" data-animate="fade-left">
+          <!-- UBAH: Ganti semua teks di bawah ini sesuai profilmu -->
+          <h3 class="about-subtitle">Halo! Saya <span class="highlight">Maulana Azhar</span> 😹</h3>
+
+          <p class="about-desc">
+            Saya adalah lulusan SMA yang memiliki minat besar di bidang <strong>Teknologi Informasi</strong>, khususnya modifikasi aplikasi dan basic pemrograman. Perjalanan saya dimulai dari rasa ingin tahu tentang bagaimana sebuah aplikasi dijalankan, hingga akhirnya saya mulai mempelajari berbagai teknologi dan membangun proyek secara mandiri.
+          </p>
+          <p class="about-desc">
+            Selain modifikasi aplikasi, saya juga tertarik pada dunia <strong>Cyber Security</strong>, <strong>konten digital</strong>, <strong>penjualan digital</strong>, dan <strong>teknologi digital</strong>. Saya senang mempelajari hal-hal baru, mengembangkan keterampilan melalui proyek nyata, serta terus meningkatkan kemampuan untuk mempersiapkan karier di bidang IT.
+          </p>
+
+          <!-- Detail info -->
+          <ul class="about-info">
+            <!-- UBAH: Ganti semua nilai di bawah ini -->
+            <li>
+              <i class="fas fa-user"></i>
+              <strong>Nama:</strong> Maulana Azhar
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <strong>Email:</strong> maulanaazhar.student@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Kota:</strong> Barito Kuala, Indonesia
+            </li>
+            <li>
+              <i class="fas fa-graduation-cap"></i>
+              <strong>Pendidikan:</strong> SMA Negeri 1 Anjir Muara
+            </li>
+            <li>
+              <i class="fas fa-briefcase"></i>
+              <strong>Status:</strong> Pelajar/Mahasiswa
+            </li>
+          </ul>
+
+          <!-- Tombol download CV -->
+          <!-- UBAH: Ganti href dengan path CV kamu (assets/cv.pdf) -->
+          <div class="about-buttons">
+            <a href="assets/cv.pdf" class="btn btn-primary" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-comments"></i> Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END ABOUT -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION STATISTIK -->
+  <!-- Angka-angka pencapaian kamu                                  -->
+  <!-- ============================================================ -->
+  <section class="stats section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+
+        <!-- Kartu statistik akan di-generate dari script.js -->
+        <!-- Lihat variabel "statsData" di script.js untuk mengubah nilai -->
+        <div class="stat-card" data-animate="fade-up" data-delay="0">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <!-- UBAH: data-target = angka akhir yang ditampilkan -->
+          <div class="stat-number" data-target="6">0</div>
+          <div class="stat-label">Total Project</div>
+        </div>
+
+        <div class="stat-card" data-animate="fade-up" data-delay="100">
+          <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-label">Sertifikat</div>
+        </div>
+
+        <div class="stat-card" data-animate="fade-up" data-delay="200">
+          <div class="stat-icon"><i class="fas fa-cart-shopping"></i></div>
+          <div class="stat-number" data-target="700">0</div>
+          <div class="stat-label">Transaksi Penjualan Online</div>
+        </div>
+
+        <div class="stat-card" data-animate="fade-up" data-delay="300">
+          <div class="stat-icon"><i class="fab fa-youtube"></i></div>
+          <div class="stat-number" data-target="100+">0</div>
+          <div class="stat-label">Konten Dibuat</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END STATS -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION SKILL -->
+  <!-- Daftar kemampuan dengan progress bar animasi                 -->
+  <!-- ============================================================ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Kemampuan</span>
+        <h2 class="section-title">Skill <span class="highlight">Saya</span></h2>
+        <p class="section-desc">
+          Teknologi dan tools yang saya gunakan dalam project-project saya.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Kolom skill kiri -->
+        <!-- Data skill diambil dari script.js (skillsData) -->
+        <!-- Kartu skill akan otomatis di-render oleh JavaScript -->
+        <div class="skills-column" id="skills-left" data-animate="fade-right"></div>
+
+        <!-- Kolom skill kanan -->
+        <div class="skills-column" id="skills-right" data-animate="fade-left"></div>
+
+      </div>
+
+      <!-- Kategori tool/teknologi tambahan -->
+      <div class="tools-section" data-animate="fade-up">
+        <h3 class="tools-title">Tools & Teknologi</h3>
+        <!-- Item tool diambil dari script.js (toolsData) -->
+        <div class="tools-grid" id="tools-grid"></div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END SKILLS -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION PORTOFOLIO -->
+  <!-- Daftar project dengan sistem filter kategori                 -->
+  <!-- ============================================================ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">PROJECT SAYA</span>
+        <h2 class="section-title">Portofolio <span class="highlight">Project</span></h2>
+        <p class="section-desc">
+          Kumpulan project yang pernah saya kerjakan. Klik filter untuk melihat berdasarkan kategori.
+        </p>
+      </div>
+
+      <!-- Tombol filter kategori -->
+      <!-- Kategori diambil otomatis dari data roject di script.js -->
+      <div class="portfolio-filters" id="portfolio-filters" data-animate="fade-up">
+        <!-- Tombol filter akan di-render otomatis oleh JavaScript -->
+      </div>
+
+      <!-- Grid card project -->
+      <!-- Card project akan di-render otomatis oleh JavaScript dari data projects[] di script.js -->
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Card project otomatis muncul di sini -->
+      </div>
+
+      <!-- Tombol Load More -->
+      <div class="portfolio-more" data-animate="fade-up">
+        <button class="btn btn-outline" id="load-more-btn">
+          <i class="fas fa-plus"></i> Lihat Semua Project
+        </button>
+      </div>
+
+    </div>
+  </section>
+  <!-- END PORTFOLIO -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION SERTIFIKAT -->
+  <!-- Menampilkan sertifikat yang pernah diraih                    -->
+  <!-- ============================================================ -->
+  <section class="certificates section" id="certificates">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Pencapaian</span>
+        <h2 class="section-title">Sertifikat <span class="highlight">& Penghargaan</span></h2>
+        <p class="section-desc">
+          sertifikat yang saya peroleh dari kegiatan akademik, pelatihan, dan pengembangan diri.
+        </p>
+      </div>
+
+      <!-- Grid sertifikat akan di-render dari data certificates[] di script.js -->
+      <div class="certificates-grid" id="certificates-grid" data-animate="fade-up">
+        <!-- Card sertifikat otomatis muncul di sini -->
+      </div>
+
+    </div>
+  </section>
+  <!-- END CERTIFICATES -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION PENGALAMAN -->
+  <!-- Timeline perjalanan pendidikan dan pengalaman kerja          -->
+  <!-- ============================================================ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Perjalanan</span>
+        <h2 class="section-title">Pendidikan & <span class="highlight">Pengalaman</span></h2>
+        <p class="section-desc">
+          Rekam jejak pendidikan, pengalaman organisasi, dan pencapaian saya.
+        </p>
+      </div>
+
+      <!-- Timeline akan di-render dari data experience[] di script.js -->
+      <div class="timeline" id="timeline" data-animate="fade-up">
+        <!-- Item timeline otomatis muncul di sini -->
+      </div>
+
+    </div>
+  </section>
+  <!-- END EXPERIENCE -->
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION KONTAK -->
+  <!-- Form dan info untuk menghubungi kamu                         -->
+  <!-- ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Hubungi Saya</span>
+        <h2 class="section-title">Mari <span class="highlight">Terhubung</span></h2>
+        <p class="section-desc">
+          Terbuka untuk diskusi, peluang kerja, magang, maupun pertanyaan seputar pengalaman dan proyek yang saya kerjakan.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info kontak kiri -->
+        <div class="contact-info" data-animate="fade-right">
+          <h3 class="contact-info-title">Informasi Kontak</h3>
+
+          <!-- UBAH: Sesuaikan semua info kontak di bawah ini -->
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <a href="mailto:maulanaazhar.student@gmail.com" class="contact-value">maulanaazhar.student@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">WhatsApp</span>
+              <!-- UBAH: Ganti nomor WA dengan nomor kamu -->
+              <a href="https://wa.me/62882020255414" class="contact-value" target="_blank">+61 882-0202-55414</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">GitHub</span>
+              <!-- UBAH: Ganti dengan username GitHub kamu -->
+              <a href="https://github.com/maulanaazharid" class="contact-value" target="_blank">github.com/maulanaazharid</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">LinkedIn</span>
+              <!-- UBAH: Ganti dengan profil LinkedIn kamu -->
+              <a href="https://linkedin.com/in/-maulana-azhar" class="contact-value" target="_blank">linkedin.com/in/-maulana-azhar</a>
+            </div>
+          </div>
+
+          <!-- Status tersedia -->
+          <div class="availability-badge">
+            <span class="status-dot"></span>
+            Mencari Pengalaman &amp; Kesempatan Baru
+          </div>
+
+        </div>
+
+        <!-- Form kontak kanan -->
+        <div class="contact-form-wrapper" data-animate="fade-left">
+          <!-- Catatan: gunakan div, bukan form tag, untuk kompatibilitas -->
+          <div class="contact-form" id="contact-form">
+
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" placeholder="Masukkan nama kamu" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="emailkamu@gmail.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subjek</label>
+              <input type="text" id="subject" placeholder="Topik pesan kamu" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" rows="5" placeholder="Tulis pesanmu di sini..."></textarea>
+            </div>
+
+            <!-- Tombol kirim (akan redirect ke WhatsApp atau mailto) -->
+            <button class="btn btn-primary btn-full" id="send-btn" onclick="sendMessage()">
+              <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+
+            <!-- Notifikasi sukses (tersembunyi secara default) -->
+            <div class="form-success" id="form-success" style="display:none;">
+              <i class="fas fa-check-circle"></i> Pesan berhasil dikirim! Saya akan segera membalas.
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END CONTACT -->
+
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- Bagian bawah website                                         -->
+  <!-- ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <!-- Logo dan deskripsi singkat -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Lanz Nomercy<span class="logo-bracket">/&gt;</span>
+          </a>
+          <!-- UBAH: Sesuaikan deskripsi singkat -->
+          <p>Jangan berpikir untuk menjadi bintang, jadilah awan hitam yang menutupi para bintang.</p>
+        </div>
+
+        <!-- Link navigasi footer -->
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#portfolio">Portofolio</a></li>
+            <li><a href="#certificates">Sertifikat</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Sosial media footer -->
+        <div class="footer-social">
+          <h4>Temukan Saya</h4>
+          <!-- UBAH: Ganti href dengan link sosmed kamu -->
+          <div class="footer-socials">
+            <a href="https://github.com/maulanaazharid" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/-maulana-azhar" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@ravenshademlbb01" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/lanz_nmc" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Maulana Azhar. Designed &amp; Developed by <span class="highlight">Maulana Azhar</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+
+  <!-- ============================================================ -->
+  <!-- BACK TO TOP BUTTON -->
+  <!-- Tombol untuk kembali ke atas halaman                         -->
+  <!-- ============================================================ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ============================================================ -->
+  <!-- MODAL GAMBAR -->
+  <!-- Lightbox untuk melihat gambar sertifikat lebih besar         -->
+  <!-- ============================================================ -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img src="" alt="" id="modal-image" />
+      <p id="modal-caption"></p>
+    </div>
+  </div>
+
+
+  <!-- File JavaScript utama (dimuat terakhir agar HTML siap) -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
