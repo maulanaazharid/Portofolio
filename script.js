@@ -75,7 +75,7 @@ const projects = [
   },
   {
     title:"Simulasi Tata Surya",
-    image:"assets/web-tatasurya.  jpg",
+    image:"assets/web-tatasurya.jpg",
     description:"Simulasi tata surya interaktif berbasis web yang menampilkan pergerakan planet mengelilingi matahari.",
     category:"Website",
     demo:"https://tatasurya-sandy.vercel.app/", source:"#"
