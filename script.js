@@ -66,6 +66,13 @@ const projects = [
     category:"Website",
     demo:"https://netraverse-shop.vercel.app/", source:"#"
   },
+    {
+    title:"XAUUSD AI Trading analysis",
+    image:"assets/tradebot.jpg",
+    description:"Bot Telegram AI untuk analisis XAUUSD dengan indikator teknikal dan berita fundamental, lengkap dengan rekomendasi trading.",
+    category:"Bot",
+    demo:"https://github.com/maulanaazharid/xau-ai", source:"#"
+  },
   {
     title:"Website Portofolio Pribadi",
     image:"assets/web-porto.jpg",
