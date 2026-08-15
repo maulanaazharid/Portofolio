@@ -29,7 +29,7 @@ Lihat website secara langsung di sini: **(https://portofoliomaulanaazhar.vercel.
 Jika Anda ingin mencoba atau melihat kodenya di komputer lokal:
 
 1. **Clone repository ini:**
-   bash
+   ```bash
    git clone [https://github.com/maulanaazharid/portofolio.git](https://github.com/maulanaazharid/portofolio.git)
 2. **Buka folder proyek:**
    cd portofolio
