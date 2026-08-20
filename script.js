@@ -128,6 +128,18 @@ const certificates = [
     image:"assets/c++.jpg"
   },
   {
+    title:"Ethical Hacker For Dummies",
+    issuer:"Digital Talent Scholarship (Komdigi)",
+    date:"Agustus 2026",
+    image:"assets/Ethical Hacker For Dummies.jpg"
+  },
+  {
+    title:"Introduction to Cyber Security and Career Awareness",
+    issuer:"Digital Talent Scholarship (Komdigi)",
+    date:"Agustus 2026",
+    image:"assets/Introduction to Cyber Security and Career Awareness.jpg"
+  },
+  {
     title:"Kompetisi Sains Madrasah (KSM) Tingkat Kabupaten",
     issuer:"Kabupaten Barito Kuala",
     date:"Juli 2019",
