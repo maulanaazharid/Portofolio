@@ -116,6 +116,18 @@ const projects = [
    ================================================================ */
 const certificates = [
   {
+    title:"Computational Thinking: Cara Berpikir Logis untuk Mengatasi Masalah",
+    issuer:"Digital Talent Scholarship (Komdigi)",
+    date:"Agustus 2025",
+    image:"assets/Computational Thinking Cara Berpikir Logis untuk Mengatasi Masalah.jpg"
+  },
+  {
+    title:"Introduction To Cloud Computing",
+    issuer:"Digital Talent Scholarship (Komdigi)",
+    date:"Agustus 2025",
+    image:"assets/Introduction To Cloud Computing.jpg"
+  },
+  {
     title:"Introduction to Python",
     issuer:"SoloLearn",
     date:"juni 2025",
