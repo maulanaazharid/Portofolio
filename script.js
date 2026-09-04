@@ -118,14 +118,20 @@ const certificates = [
   {
     title:"Computational Thinking: Cara Berpikir Logis untuk Mengatasi Masalah",
     issuer:"Digital Talent Scholarship (Komdigi)",
-    date:"Agustus 2025",
+    date:"Agustus 2026",
     image:"assets/Computational Thinking Cara Berpikir Logis untuk Mengatasi Masalah.jpg"
   },
   {
     title:"Introduction To Cloud Computing",
     issuer:"Digital Talent Scholarship (Komdigi)",
-    date:"Agustus 2025",
+    date:"Agustus 2026",
     image:"assets/Introduction To Cloud Computing.jpg"
+  },
+  {
+    title:"GOT Skill In: Behind The Hiring Process",
+    issuer:"PT Global Service Indonesia",
+    date:"Agustus 2026",
+    image:"assets/GOT.jpg"
   },
   {
     title:"Introduction to Python",
