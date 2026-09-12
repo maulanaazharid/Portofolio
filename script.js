@@ -134,6 +134,12 @@ const certificates = [
     image:"assets/GOT.jpg"
   },
   {
+    title:"Latihan Keterampilan Manajemen Mahasiswa Tingkat Pra-Dasar",
+    issuer:"Himpunan Mahasiswa Elektro Politeknik Negeri Banjarmasin",
+    date:"Agustus 2026",
+    image:"assets/HME1.jpg"
+  },
+  {
     title:"Introduction to Python",
     issuer:"SoloLearn",
     date:"juni 2025",
